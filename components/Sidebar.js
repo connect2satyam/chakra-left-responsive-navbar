@@ -22,6 +22,8 @@ import NavItem from '../components/NavItem'
 
 export default function Sidebar() {
     const [navSize, changeNavSize] = useState("large")
+    const changeNavHandler = () => navSize === "small" ? changeNavSize("large") : changeNavSize("small");
+
     return (
         <Flex
             pos="sticky"
@@ -33,10 +35,9 @@ export default function Sidebar() {
             w={navSize == "small" ? "75px" : "200px"}
             flexDir="column"
             justifyContent="space-between"
-            backgroundColor={'yellow.300'}
         >
             <Flex
-                p="5%"
+                p="1%"
                 flexDir="column"
                 w="100%"
                 alignItems={navSize == "small" ? "center" : "flex-start"}
@@ -47,12 +48,7 @@ export default function Sidebar() {
                     mt={5}
                     _hover={{ background: 'none' }}
                     icon={<FiMenu />}
-                    onClick={() => {
-                        if (navSize == "small")
-                            changeNavSize("large")
-                        else
-                            changeNavSize("small")
-                    }}
+                    onClick={() => changeNavHandler()}
                 />
                 <NavItem navSize={navSize} icon={FiHome} title="Dashboard" description="This is the description for the dashboard." />
                 <NavItem navSize={navSize} icon={FiCalendar} title="Calendar" description="Satya, this is the description for the calendar."/>
@@ -74,7 +70,7 @@ export default function Sidebar() {
                 <Flex mt={4} align="center">
                     <Avatar size="sm" src="avatar-1.jpg" />
                     <Flex flexDir="column" ml={4} display={navSize == "small" ? "none" : "flex"}>
-                        <Heading as="h3" size="sm">Satyanarayana Devi</Heading>
+                        <Heading as="h3" size="sm">Satyanarayana</Heading>
                         <Text color="gray">Admin</Text>
                     </Flex>
                 </Flex>
