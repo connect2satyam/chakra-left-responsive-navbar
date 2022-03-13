@@ -24,8 +24,9 @@ export default function Sidebar() {
     const [navSize, changeNavSize] = useState("large")
     const changeNavHandler = () => navSize === "small" ? changeNavSize("large") : changeNavSize("small");
 
+    // display="none"  : TODO : show / hide sidebar
     return (
-        <Flex
+        <Flex 
             pos="sticky"
             left="1"
             h="90vh"
