@@ -24,14 +24,15 @@ export default function Sidebar() {
     return (
         <Flex
             pos="sticky"
-            left="5"
+            left="1"
             h="95vh"
-            marginTop="2.5vh"
+            marginTop="5vh"
             boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
             borderRadius={navSize == "small" ? "15px" : "30px"}
             w={navSize == "small" ? "75px" : "200px"}
             flexDir="column"
             justifyContent="space-between"
+            backgroundColor={'yellow.300'}
         >
             <Flex
                 p="5%"
@@ -53,12 +54,12 @@ export default function Sidebar() {
                     }}
                 />
                 <NavItem navSize={navSize} icon={FiHome} title="Dashboard" description="This is the description for the dashboard." />
-                <NavItem navSize={navSize} icon={FiCalendar} title="Calendar" active />
-                <NavItem navSize={navSize} icon={FiUser} title="Clients" />
-                <NavItem navSize={navSize} icon={IoPawOutline} title="Animals" />
-                <NavItem navSize={navSize} icon={FiDollarSign} title="Stocks" />
-                <NavItem navSize={navSize} icon={FiBriefcase} title="Reports" />
-                <NavItem navSize={navSize} icon={FiSettings} title="Settings" />
+                <NavItem navSize={navSize} icon={FiCalendar} title="Calendar" description="Satya, this is the description for the calendar."/>
+                <NavItem navSize={navSize} icon={FiUser} title="Clients" description="Satya, this is the description for the clients." />
+                <NavItem navSize={navSize} icon={IoPawOutline} title="Animals" description="Satya, this is the description for the animals." />
+                <NavItem navSize={navSize} icon={FiDollarSign} title="Stocks" description="Satya, this is the description for the stocks."/>
+                <NavItem navSize={navSize} icon={FiBriefcase} title="Reports" description="Satya, this is the description for the reports."/>
+                <NavItem navSize={navSize} icon={FiSettings} title="Settings" description="Satya, this is the description for the settings."/>
             </Flex>
 
             <Flex
@@ -72,7 +73,7 @@ export default function Sidebar() {
                 <Flex mt={4} align="center">
                     <Avatar size="sm" src="avatar-1.jpg" />
                     <Flex flexDir="column" ml={4} display={navSize == "small" ? "none" : "flex"}>
-                        <Heading as="h3" size="sm">Sylwia Weller</Heading>
+                        <Heading as="h3" size="sm">Satyanarayana Devi</Heading>
                         <Text color="gray">Admin</Text>
                     </Flex>
                 </Flex>

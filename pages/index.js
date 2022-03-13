@@ -4,7 +4,7 @@ import { FiMenu } from 'react-icons/fi'
 
 export default function Home() {
   return (
-    <Flex w="100%">
+    <Flex w="100%" backgroundColor={'green.400'}>
       <Sidebar />
       <Flex
         pos="absolute"
