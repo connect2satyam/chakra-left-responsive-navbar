@@ -5,7 +5,8 @@ import {
     IconButton,
     Divider,
     Avatar,
-    Heading
+    Heading,
+    Link
 } from '@chakra-ui/react'
 import {
     FiMenu,
@@ -25,8 +26,8 @@ export default function Sidebar() {
         <Flex
             pos="sticky"
             left="1"
-            h="95vh"
-            marginTop="5vh"
+            h="90vh"
+            marginTop="1vh"
             boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.05)"
             borderRadius={navSize == "small" ? "15px" : "30px"}
             w={navSize == "small" ? "75px" : "200px"}
